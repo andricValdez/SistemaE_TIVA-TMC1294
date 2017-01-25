@@ -1,0 +1,145 @@
+
+
+
+
+<!--The DOCTYPE declaration defines the document type to be HTML-->
+<!DOCTYPE HTML> 
+<!--HTML is a markup language for describing web documents and stands for Hyper Text Markup Language-->
+<html lang="en-US">
+
+<head>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+
+<script src="jquery-1.11.3.min.js"></script>
+<script src="jquery.mobile-1.4.5.js"></script> 
+<script src="jquery.easing.1.3.js"></script>
+<script src="JQuery_Functions.js"></script> 
+
+</head>
+
+<body>
+
+<!-- 
+		Basic syntax is: $(selector).action()
+
+		A $ sign to define/access jQuery
+		A (selector) to "query (or find)" HTML elements
+		A jQuery action() to be performed on the element(s)
+ -->
+<!-- <button id="asd">Click me!</button> -->
+
+<!-- ********************************* Página principal ********************************* -->
+
+ <div data-role="page" id="pageone">
+    <div data-role="header" class="ui-btn ui-shadow ui-corner-all">
+      <h1 style="color:blue">Aula del Futuro</h1>
+    </div>
+    <br>
+    <div data-role="main" class="ui-content">
+<!--       <div data-role="controlgroup" data-type="vertical"> -->
+        <a href="#ProjectsControl" class="ui-btn ui-shadow ui-corner-all ui-btn-b" data-transition="flip">Projectors</a>
+        <a href="#" class="ui-btn ui-shadow ui-corner-all ui-btn-b" >Lights</a>
+        <a href="#" class="ui-btn ui-shadow ui-corner-all ui-btn-b" >Camera</a>
+<!--       </div> -->
+    </div>
+
+    <div data-role="footer" class="ui-btn ui-shadow ui-corner-all">
+      <h1 style="color:blue">UNAM - CCADET</h1>
+    </div>
+</div> 
+
+<!-- ********************************* Proyectores ********************************* -->
+
+<div data-role="page" id="ProjectsControl">
+  <!-- <div data-role="header" class="ui-btn ui-shadow ui-corner-all"> -->
+   <div data-role="header" data-position="inline">
+    <a href="#pageone" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left" data-transition="flip" data-direction="reverse">Home</a>
+      <h1 style="color:blue">Projects</h1>
+          <a href="#Scheduling" class="ui-btn ui-corner-all ui-shadow ui-icon-calendar ui-btn-icon-left">Calendar</a>
+      <!-- <a href="#pageone" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext" data-transition="flip" data-direction="reverse">Home Icon</a> -->
+ <!--      <a href="#pagetwo" class="ui-btn ui-corner-all ui-icon-refresh ui-btn-icon-notext">Right</a> -->
+  </div>
+
+  <div data-role="main" class="ui-content">
+      <br>
+      <div>
+        <img src="NEC_OFF.png" id="btn1" style="width:95px;height:80px;position:relative;left:8%;">
+        <img src="NEC_OFF.png" id="btn2" style="width:95px;height:80px;position:relative;left:27%;">
+      </div>
+  <br><br><br><br>
+      <div>
+        <img src="Vsonic_OFF.png" id="btn3" style="width:110px;height:95px;position:relative;left:5%;">
+        <img src="Vsonic_OFF.png" id="btn4" style="width:110px;height:95px;position:relative;left:18%;">
+      </div>
+  </div>
+  <br>
+  <div data-role="footer" class="ui-btn ui-shadow ui-corner-all">
+      <h1 style="color:blue">UNAM - CCADET</h1>
+  </div>
+</div> 
+
+<!-- ********************************* Proyectores Scheduling ********************************* -->
+
+<div data-role="page" id="Scheduling">
+    <div data-role="header" class="inline">
+      <h1 style="color:blue">Scheduling</h1>
+      <a href="#ProjectsControl" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left" data-transition="flip" data-direction="reverse">Back</a>
+    </div>
+    <br>
+
+    <div data-role="main" class="ui-content">
+   	 <form method="post" action="demoform.asp">
+       <fieldset>
+        <!-- <label for="day">Select As Many Days As You'd Like:</label> -->
+        <select name="SelectProjector" id="SP" multiple="multiple" data-native-menu="false">
+          <option>Projector</option>
+          <option value="Projector1">View Sonic 1</option>
+          <option value="Projector2">View Sonic 2</option>
+          <option value="Projector3">Nec 1</option>
+          <option value="Projector4">Nec 2</option>
+        </select>
+       </fieldset>
+
+       <fieldset>
+        <!-- <label for="day">Select As Many Days As You'd Like:</label> -->
+        <select name="day" id="day" multiple="multiple" data-native-menu="false">
+          <option>Day</option>
+          <option value="mon">Monday</option>
+          <option value="tue">Tuesday</option>
+          <option value="wed">Wednesday</option>
+          <option value="thu">Thursday</option>
+          <option value="fri">Friday</option>
+          <option value="sat">Saturday</option>
+          <option value="sun">Sunday</option>
+        </select>
+       </fieldset>
+
+
+      <input type="submit" data-inline="true" value="Submit">
+     </form>
+    </div>
+
+    <div data-role="footer" class="ui-btn ui-shadow ui-corner-all">
+      <h1 style="color:blue">UNAM - CCADET</h1>
+    </div>
+</div> 
+
+
+</body>
+
+</html>
+
+
+
+
